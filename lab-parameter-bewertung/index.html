@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laborparameter Bewertung</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Laborparameter Bewertung</h1>
+        <form id="labForm">
+            <div class="basic-info">
+                <div class="info-item">
+                    <label for="loincCode">LOINC-Code:</label>
+                    <input type="text" id="loincCode" name="loincCode" required pattern="^\d+-\d+$" placeholder="z.B. 2351-5">
+                </div>
+                <div class="info-item">
+                    <label for="parameterName">Name des Laborparameters:</label>
+                    <input type="text" id="parameterName" name="parameterName" required placeholder="z.B. Kalium">
+                </div>
+                <div class="info-item">
+                    <label for="material">Probenmaterial:</label>
+                    <select id="material" name="material" required>
+                        <option value="">Bitte wählen</option>
+                        <option value="blood">Blut</option>
+                        <option value="urine">Harn</option>
+                        <option value="csf">Liquor</option>
+                        <option value="punctate">Punktat</option>
+                        <option value="swab">Abstrich</option>
+                        <option value="stool">Stuhl</option>
+                        <option value="tissue">Gewebe</option>
+                        <option value="other">Sonstiges</option>
+                    </select>
+                </div>
+            </div>
+            <div class="category">
+                <h2>a) Präanalytischer Aufwand</h2>
+                <select name="preanalytical" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="0">Konzept nicht anwendbar</option>
+                    <option value="1">Vollautomatisierte Probenverarbeitung</option>
+                    <option value="4">Teilautomatisierte Probenverarbeitung</option>
+                    <option value="9">Manuelle Probenverarbeitung</option>
+                </select>
+            </div>
+
+            <div class="category">
+                <h2>b) Analytischer Aufwand</h2>
+                <select name="analytical" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="0">Vollautomatisiert (kein Aufwand)</option>
+                    <option value="1">Manueller Aufwand sehr gering (<15 min)</option>
+                    <option value="3">Manueller Aufwand gering (<1h)</option>
+                    <option value="5">Manueller Aufwand mittel (1-2h)</option>
+                    <option value="7">Manueller Aufwand hoch (2-4h)</option>
+                    <option value="9">Manueller Aufwand sehr hoch (>4h)</option>
+                </select>
+            </div>
+
+            <div class="category">
+                <h2>c) Analytischer Aufwand (Expertise)</h2>
+                <select name="expertise" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="0">Konzept nicht anwendbar</option>
+                    <option value="1">Techniker mit Grundkenntnissen</option>
+                    <option value="4">Techniker mit erweiterten Laborkenntnissen</option>
+                    <option value="9">Techniker mit Spezialkenntnissen</option>
+                </select>
+            </div>
+
+            <div class="category">
+                <h2>d) Postanalytischer Aufwand</h2>
+                <select name="postanalytical" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="0">Konzept nicht anwendbar</option>
+                    <option value="1">Kein Aufwand</option>
+                    <option value="2">Technische Plausibilitätskontrolle notwendig</option>
+                    <option value="3">Potentieller Reflextest</option>
+                    <option value="5">Zusätzliche analytische Interpretation notwendig</option>
+                    <option value="6">Potentielle reflektive Testung</option>
+                    <option value="7">Potentielle reflektive Testung nach Rücksprache</option>
+                    <option value="8">Experteninterpretation notwendig</option>
+                    <option value="9">Experteninterpretation mit erweiterter Expertise notwendig</option>
+                </select>
+            </div>
+
+            <div class="category">
+                <h2>e) Administrativer Aufwand</h2>
+                <select name="administrative" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="0">Konzept nicht anwendbar</option>
+                    <option value="1">Automatische Berechnung</option>
+                    <option value="2">Automatische schriftliche Interpretation</option>
+                    <option value="3">Zusätzliche Analyse nicht notwendig</option>
+                    <option value="5">Manuelle Übertragung/Berechnung in LIS/EHR</option>
+                    <option value="6">Individuelle schriftliche Interpretation</option>
+                    <option value="7">Direkter Kontakt zum Kliniker notwendig</option>
+                </select>
+            </div>
+
+            <div class="category">
+                <h2>f) Invasivität der Probenentnahme</h2>
+                <select name="invasiveness" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="0">Konzept nicht anwendbar</option>
+                    <option value="1">Nicht invasiv</option>
+                    <option value="2">Minimal invasiv</option>
+                    <option value="3">Venenpunktion</option>
+                    <option value="4">Arterienpunktion</option>
+                    <option value="5">Punktion von Körperhöhlen oder Knochenmark</option>
+                    <option value="6">Punktion des ZNS</option>
+                    <option value="7">Endoskopische Probenentnahme (ohne Anästhesie)</option>
+                    <option value="8">Endoskopische Probenentnahme (mit Anästhesie)</option>
+                    <option value="9">Chirurgische Probenentnahme</option>
+                </select>
+            </div>
+
+            <div class="category">
+                <h2>g) Benötigte Zeit für die Analyse</h2>
+                <select name="timeRequired" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="0">Konzept nicht anwendbar</option>
+                    <option value="1">&lt;1 Stunde</option>
+                    <option value="4">1-6 Stunden</option>
+                    <option value="6">6-12 Stunden</option>
+                    <option value="9">&gt;12 Stunden</option>
+                </select>
+            </div>
+
+            <button type="submit">Bewertung berechnen</button>
+        </form>
+
+        <div id="result" class="result-container">
+            <h2>Ergebnis</h2>
+            <div id="resultDetails"></div>
+            <div id="totalScore"></div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html> 
