@@ -1,0 +1,8 @@
+Django>=4.2
+mysqlclient
+django-simple-captcha
+python-dotenv
+requests==2.31.0
+django-crispy-forms==2.1
+crispy-bootstrap5==2023.10
+django-select2==7.11.0 

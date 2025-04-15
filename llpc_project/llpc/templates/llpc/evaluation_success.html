@@ -1,0 +1,20 @@
+{% extends 'llpc/base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Evaluation Submitted" %} - LLPC{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-body text-center">
+                <h1 class="card-title mb-4">{% trans "Evaluation Submitted Successfully" %}</h1>
+                <p class="card-text">{% trans "Your parameter evaluation has been submitted and is pending approval by an administrator." %}</p>
+                <div class="mt-4">
+                    <a href="{% url 'llpc:parameter_evaluation' %}" class="btn btn-primary">{% trans "Submit Another Evaluation" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

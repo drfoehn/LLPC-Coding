@@ -1,0 +1,127 @@
+{% extends 'llpc/base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Parameter Evaluation" %} - LLPC{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <h1 class="mb-4">{% trans "Parameter Evaluation" %}</h1>
+        
+        <form method="post" id="parameterForm">
+            {% csrf_token %}
+            
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0">{% trans "LOINC Search" %}</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        {{ form.loinc_search }}
+                    </div>
+                    <div class="mb-3">
+                        {{ form.loinc_code }}
+                    </div>
+                    <div class="mb-3">
+                        {{ form.parameter_name }}
+                    </div>
+                    <div class="mb-3">
+                        {{ form.material }}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0">{% trans "Evaluation Criteria" %}</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            {{ form.preanalytical.label_tag }}
+                            {{ form.preanalytical }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ form.analytical.label_tag }}
+                            {{ form.analytical }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ form.expertise.label_tag }}
+                            {{ form.expertise }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ form.postanalytical.label_tag }}
+                            {{ form.postanalytical }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ form.administrative.label_tag }}
+                            {{ form.administrative }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ form.invasiveness.label_tag }}
+                            {{ form.invasiveness }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ form.time_required.label_tag }}
+                            {{ form.time_required }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">{% trans "Submit Evaluation" %}</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+$(document).ready(function() {
+    // Initialize Select2 for LOINC search
+    $('#id_loinc_search').select2({
+        theme: 'bootstrap-5',
+        placeholder: '{% trans "Search for LOINC code or parameter name..." %}',
+        allowClear: true,
+        minimumInputLength: 2,
+        ajax: {
+            url: '{% url "llpc:loinc_search" %}',
+            dataType: 'json',
+            delay: 250,
+            data: function(params) {
+                return {
+                    q: params.term,
+                    lang: '{{ LANGUAGE_CODE }}'
+                };
+            },
+            processResults: function(data) {
+                return {
+                    results: data.results.map(function(item) {
+                        return {
+                            id: item.loinc_code,
+                            text: item.loinc_code + ' - ' + item.name,
+                            loinc_code: item.loinc_code,
+                            parameter_name: item.name,
+                            material: item.system
+                        };
+                    })
+                };
+            },
+            cache: true
+        }
+    }).on('select2:select', function(e) {
+        var data = e.params.data;
+        $('#id_loinc_code').val(data.loinc_code);
+        $('#id_parameter_name').val(data.parameter_name);
+        $('#id_material').val(data.material);
+    });
+    
+    // Initialize Select2 for all select fields
+    $('select').select2({
+        theme: 'bootstrap-5'
+    });
+});
+</script>
+{% endblock %} 

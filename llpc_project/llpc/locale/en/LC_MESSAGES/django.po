@@ -1,0 +1,164 @@
+# English translations for LLPC.
+# Copyright (C) 2024
+# This file is distributed under the same license as the LLPC project.
+msgid ""
+msgstr ""
+"Project-Id-Version: LLPC\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-14 12:00+0000\n"
+"PO-Revision-Date: 2024-03-14 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: llpc/forms.py:15
+msgid "Laboratory Name"
+msgstr "Laboratory Name"
+
+#: llpc/forms.py:16
+msgid "Laboratory Leader"
+msgstr "Laboratory Leader"
+
+#: llpc/forms.py:17
+msgid "Laboratory Type"
+msgstr "Laboratory Type"
+
+#: llpc/forms.py:18
+msgid "Address"
+msgstr "Address"
+
+#: llpc/forms.py:19
+msgid "Referral Type"
+msgstr "Referral Type"
+
+#: llpc/forms.py:31
+msgid "LOINC Search"
+msgstr "LOINC Search"
+
+#: llpc/forms.py:32
+msgid "Search for LOINC code or parameter name..."
+msgstr "Search for LOINC code or parameter name..."
+
+#: llpc/forms.py:44
+msgid "LOINC Code"
+msgstr "LOINC Code"
+
+#: llpc/forms.py:45
+msgid "Parameter Name"
+msgstr "Parameter Name"
+
+#: llpc/forms.py:46
+msgid "Material"
+msgstr "Material"
+
+#: llpc/forms.py:47
+msgid "Preanalytical Effort"
+msgstr "Preanalytical Effort"
+
+#: llpc/forms.py:48
+msgid "Analytical Effort"
+msgstr "Analytical Effort"
+
+#: llpc/forms.py:49
+msgid "Expertise Required"
+msgstr "Expertise Required"
+
+#: llpc/forms.py:50
+msgid "Postanalytical Effort"
+msgstr "Postanalytical Effort"
+
+#: llpc/forms.py:51
+msgid "Administrative Effort"
+msgstr "Administrative Effort"
+
+#: llpc/forms.py:52
+msgid "Invasiveness"
+msgstr "Invasiveness"
+
+#: llpc/forms.py:53
+msgid "Time Required"
+msgstr "Time Required"
+
+#: llpc/templates/llpc/base.html:8
+msgid "LLPC - Laboratory Parameter Classification"
+msgstr "LLPC - Laboratory Parameter Classification"
+
+#: llpc/templates/llpc/base.html:24
+msgid "Parameter Evaluation"
+msgstr "Parameter Evaluation"
+
+#: llpc/templates/llpc/base.html:26
+msgid "Laboratory"
+msgstr "Laboratory"
+
+#: llpc/templates/llpc/base.html:47
+msgid "Logout"
+msgstr "Logout"
+
+#: llpc/templates/llpc/base.html:49
+msgid "Login"
+msgstr "Login"
+
+#: llpc/templates/llpc/parameter_evaluation.html:8
+msgid "Parameter Evaluation"
+msgstr "Parameter Evaluation"
+
+#: llpc/templates/llpc/parameter_evaluation.html:17
+msgid "LOINC Search"
+msgstr "LOINC Search"
+
+#: llpc/templates/llpc/parameter_evaluation.html:35
+msgid "Evaluation Criteria"
+msgstr "Evaluation Criteria"
+
+#: llpc/templates/llpc/parameter_evaluation.html:71
+msgid "Submit Evaluation"
+msgstr "Submit Evaluation"
+
+#: llpc/templates/llpc/evaluation_success.html:8
+msgid "Evaluation Submitted"
+msgstr "Evaluation Submitted"
+
+#: llpc/templates/llpc/evaluation_success.html:13
+msgid "Evaluation Submitted Successfully"
+msgstr "Evaluation Submitted Successfully"
+
+#: llpc/templates/llpc/evaluation_success.html:14
+msgid "Your parameter evaluation has been submitted and is pending approval by an administrator."
+msgstr "Your parameter evaluation has been submitted and is pending approval by an administrator."
+
+#: llpc/templates/llpc/evaluation_success.html:16
+msgid "Submit Another Evaluation"
+msgstr "Submit Another Evaluation"
+
+#: llpc/templates/llpc/laboratory_form.html:24
+msgid "Save Laboratory"
+msgstr "Save Laboratory"
+
+#: llpc/models.py:10
+msgid "Hospital Laboratory"
+msgstr "Hospital Laboratory"
+
+#: llpc/models.py:11
+msgid "Private Laboratory"
+msgstr "Private Laboratory"
+
+#: llpc/models.py:12
+msgid "University Laboratory"
+msgstr "University Laboratory"
+
+#: llpc/models.py:13
+msgid "Other"
+msgstr "Other"
+
+#: llpc/models.py:17
+msgid "Internal Only"
+msgstr "Internal Only"
+
+#: llpc/models.py:18
+msgid "Internal and External"
+msgstr "Internal and External" 

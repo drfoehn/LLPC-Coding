@@ -1,0 +1,320 @@
+# German translations for LLPC.
+# Copyright (C) 2024
+# This file is distributed under the same license as the LLPC project.
+msgid ""
+msgstr ""
+"Project-Id-Version: LLPC\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-14 12:00+0000\n"
+"PO-Revision-Date: 2024-03-14 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: llpc/forms.py:15
+msgid "Laboratory Name"
+msgstr "Laboratoriumsname"
+
+#: llpc/forms.py:16
+msgid "Laboratory Leader"
+msgstr "Laboratoriumsleiter"
+
+#: llpc/forms.py:17
+msgid "Laboratory Type"
+msgstr "Laboratoriumstyp"
+
+#: llpc/forms.py:18
+msgid "Address"
+msgstr "Adresse"
+
+#: llpc/forms.py:19
+msgid "Referral Type"
+msgstr "Überweisungstyp"
+
+#: llpc/forms.py:31
+msgid "LOINC Search"
+msgstr "LOINC-Suche"
+
+#: llpc/forms.py:32
+msgid "Search for LOINC code or parameter name..."
+msgstr "Nach LOINC-Code oder Parametername suchen..."
+
+#: llpc/forms.py:44
+msgid "LOINC Code"
+msgstr "LOINC-Code"
+
+#: llpc/forms.py:45
+msgid "Parameter Name"
+msgstr "Parametername"
+
+#: llpc/forms.py:46
+msgid "Material"
+msgstr "Material"
+
+#: llpc/forms.py:47
+msgid "Preanalytical Effort"
+msgstr "Präanalytischer Aufwand"
+
+#: llpc/forms.py:48
+msgid "Analytical Effort"
+msgstr "Analytischer Aufwand"
+
+#: llpc/forms.py:49
+msgid "Expertise Required"
+msgstr "Benötigte Expertise"
+
+#: llpc/forms.py:50
+msgid "Postanalytical Effort"
+msgstr "Postanalytischer Aufwand"
+
+#: llpc/forms.py:51
+msgid "Administrative Effort"
+msgstr "Administrativer Aufwand"
+
+#: llpc/forms.py:52
+msgid "Invasiveness"
+msgstr "Invasivität"
+
+#: llpc/forms.py:53
+msgid "Time Required"
+msgstr "Benötigte Zeit"
+
+#: llpc/templates/llpc/base.html:8
+msgid "LLPC - Laboratory Parameter Classification"
+msgstr "LLPC - Laborparameter-Klassifikation"
+
+#: llpc/templates/llpc/base.html:24
+msgid "Parameter Evaluation"
+msgstr "Parameter-Bewertung"
+
+#: llpc/templates/llpc/base.html:26
+msgid "Laboratory"
+msgstr "Laboratorium"
+
+#: llpc/templates/llpc/base.html:47
+msgid "Logout"
+msgstr "Abmelden"
+
+#: llpc/templates/llpc/base.html:49
+msgid "Login"
+msgstr "Anmelden"
+
+#: llpc/templates/llpc/parameter_evaluation.html:8
+msgid "Parameter Evaluation"
+msgstr "Parameter-Bewertung"
+
+#: llpc/templates/llpc/parameter_evaluation.html:17
+msgid "LOINC Search"
+msgstr "LOINC-Suche"
+
+#: llpc/templates/llpc/parameter_evaluation.html:35
+msgid "Evaluation Criteria"
+msgstr "Bewertungskriterien"
+
+#: llpc/templates/llpc/parameter_evaluation.html:71
+msgid "Submit Evaluation"
+msgstr "Bewertung einreichen"
+
+#: llpc/templates/llpc/evaluation_success.html:8
+msgid "Evaluation Submitted"
+msgstr "Bewertung eingereicht"
+
+#: llpc/templates/llpc/evaluation_success.html:13
+msgid "Evaluation Submitted Successfully"
+msgstr "Bewertung erfolgreich eingereicht"
+
+#: llpc/templates/llpc/evaluation_success.html:14
+msgid "Your parameter evaluation has been submitted and is pending approval by an administrator."
+msgstr "Ihre Parameter-Bewertung wurde eingereicht und wartet auf die Genehmigung durch einen Administrator."
+
+#: llpc/templates/llpc/evaluation_success.html:16
+msgid "Submit Another Evaluation"
+msgstr "Weitere Bewertung einreichen"
+
+#: llpc/templates/llpc/laboratory_form.html:24
+msgid "Save Laboratory"
+msgstr "Laboratorium speichern"
+
+#: llpc/models.py:10
+msgid "Hospital Laboratory"
+msgstr "Krankenhauslaboratorium"
+
+#: llpc/models.py:11
+msgid "Private Laboratory"
+msgstr "Privates Laboratorium"
+
+#: llpc/models.py:12
+msgid "University Laboratory"
+msgstr "Universitätslaboratorium"
+
+#: llpc/models.py:13
+msgid "Other"
+msgstr "Sonstiges"
+
+#: llpc/models.py:17
+msgid "Internal Only"
+msgstr "Nur intern"
+
+#: llpc/models.py:18
+msgid "Internal and External"
+msgstr "Intern und extern"
+
+#: llpc/models.py:35
+msgid "Konzept nicht anwendbar"
+msgstr "Konzept nicht anwendbar"
+
+#: llpc/models.py:36
+msgid "Vollautomatisierte Probenverarbeitung"
+msgstr "Vollautomatisierte Probenverarbeitung"
+
+#: llpc/models.py:37
+msgid "Teilautomatisierte Probenverarbeitung"
+msgstr "Teilautomatisierte Probenverarbeitung"
+
+#: llpc/models.py:38
+msgid "Manuelle Probenverarbeitung"
+msgstr "Manuelle Probenverarbeitung"
+
+#: llpc/models.py:42
+msgid "Vollautomatisiert (kein Aufwand)"
+msgstr "Vollautomatisiert (kein Aufwand)"
+
+#: llpc/models.py:43
+msgid "Manueller Aufwand sehr gering (<15 min)"
+msgstr "Manueller Aufwand sehr gering (<15 min)"
+
+#: llpc/models.py:44
+msgid "Manueller Aufwand gering (<1h)"
+msgstr "Manueller Aufwand gering (<1h)"
+
+#: llpc/models.py:45
+msgid "Manueller Aufwand mittel (1-2h)"
+msgstr "Manueller Aufwand mittel (1-2h)"
+
+#: llpc/models.py:46
+msgid "Manueller Aufwand hoch (2-4h)"
+msgstr "Manueller Aufwand hoch (2-4h)"
+
+#: llpc/models.py:47
+msgid "Manueller Aufwand sehr hoch (>4h)"
+msgstr "Manueller Aufwand sehr hoch (>4h)"
+
+#: llpc/models.py:51
+msgid "Techniker mit Grundkenntnissen"
+msgstr "Techniker mit Grundkenntnissen"
+
+#: llpc/models.py:52
+msgid "Techniker mit erweiterten Laborkenntnissen"
+msgstr "Techniker mit erweiterten Laborkenntnissen"
+
+#: llpc/models.py:53
+msgid "Techniker mit Spezialkenntnissen"
+msgstr "Techniker mit Spezialkenntnissen"
+
+#: llpc/models.py:57
+msgid "Kein Aufwand"
+msgstr "Kein Aufwand"
+
+#: llpc/models.py:58
+msgid "Technische Plausibilitätskontrolle notwendig"
+msgstr "Technische Plausibilitätskontrolle notwendig"
+
+#: llpc/models.py:59
+msgid "Potentieller Reflextest"
+msgstr "Potentieller Reflextest"
+
+#: llpc/models.py:60
+msgid "Zusätzliche analytische Interpretation notwendig"
+msgstr "Zusätzliche analytische Interpretation notwendig"
+
+#: llpc/models.py:61
+msgid "Potentielle reflektive Testung"
+msgstr "Potentielle reflektive Testung"
+
+#: llpc/models.py:62
+msgid "Potentielle reflektive Testung nach Rücksprache"
+msgstr "Potentielle reflektive Testung nach Rücksprache"
+
+#: llpc/models.py:63
+msgid "Experteninterpretation notwendig"
+msgstr "Experteninterpretation notwendig"
+
+#: llpc/models.py:64
+msgid "Experteninterpretation mit erweiterter Expertise notwendig"
+msgstr "Experteninterpretation mit erweiterter Expertise notwendig"
+
+#: llpc/models.py:68
+msgid "Automatische Berechnung"
+msgstr "Automatische Berechnung"
+
+#: llpc/models.py:69
+msgid "Automatische schriftliche Interpretation"
+msgstr "Automatische schriftliche Interpretation"
+
+#: llpc/models.py:70
+msgid "Manuelle Übertragung/Berechnung in LIS/EHR"
+msgstr "Manuelle Übertragung/Berechnung in LIS/EHR"
+
+#: llpc/models.py:71
+msgid "Individuelle schriftliche Interpretation"
+msgstr "Individuelle schriftliche Interpretation"
+
+#: llpc/models.py:72
+msgid "Direkter Kontakt zum Kliniker notwendig"
+msgstr "Direkter Kontakt zum Kliniker notwendig"
+
+#: llpc/models.py:76
+msgid "Nicht invasiv"
+msgstr "Nicht invasiv"
+
+#: llpc/models.py:77
+msgid "Minimal invasiv"
+msgstr "Minimal invasiv"
+
+#: llpc/models.py:78
+msgid "Venenpunktion"
+msgstr "Venenpunktion"
+
+#: llpc/models.py:79
+msgid "Arterienpunktion"
+msgstr "Arterienpunktion"
+
+#: llpc/models.py:80
+msgid "Punktion von Körperhöhlen oder Knochenmark"
+msgstr "Punktion von Körperhöhlen oder Knochenmark"
+
+#: llpc/models.py:81
+msgid "Punktion des ZNS"
+msgstr "Punktion des ZNS"
+
+#: llpc/models.py:82
+msgid "Endoskopische Probenentnahme (ohne Anästhesie)"
+msgstr "Endoskopische Probenentnahme (ohne Anästhesie)"
+
+#: llpc/models.py:83
+msgid "Endoskopische Probenentnahme (mit Anästhesie)"
+msgstr "Endoskopische Probenentnahme (mit Anästhesie)"
+
+#: llpc/models.py:84
+msgid "Chirurgische Probenentnahme"
+msgstr "Chirurgische Probenentnahme"
+
+#: llpc/models.py:88
+msgid "<1 Stunde"
+msgstr "<1 Stunde"
+
+#: llpc/models.py:89
+msgid "1-6 Stunden"
+msgstr "1-6 Stunden"
+
+#: llpc/models.py:90
+msgid "6-12 Stunden"
+msgstr "6-12 Stunden"
+
+#: llpc/models.py:91
+msgid ">12 Stunden"
+msgstr ">12 Stunden" 
