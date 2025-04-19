@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h2>{{ laboratory.name }}</h2>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>{% trans "Laboratory Information" %}</h4>
+                    <dl class="row">
+                        <dt class="col-sm-4">{% trans "Name" %}</dt>
+                        <dd class="col-sm-8">{{ laboratory.name }}</dd>
+                        
+                        <dt class="col-sm-4">{% trans "Address" %}</dt>
+                        <dd class="col-sm-8">{{ laboratory.address }}</dd>
+                        
+                        <dt class="col-sm-4">{% trans "Contact Person" %}</dt>
+                        <dd class="col-sm-8">{{ laboratory.contact_person }}</dd>
+                        
+                        <dt class="col-sm-4">{% trans "Email" %}</dt>
+                        <dd class="col-sm-8">{{ laboratory.email }}</dd>
+                        
+                        <dt class="col-sm-4">{% trans "Phone" %}</dt>
+                        <dd class="col-sm-8">{{ laboratory.phone }}</dd>
+                    </dl>
+                </div>
+                <div class="col-md-6">
+                    <h4>{% trans "Additional Information" %}</h4>
+                    <dl class="row">
+                        <dt class="col-sm-4">{% trans "Created" %}</dt>
+                        <dd class="col-sm-8">{{ laboratory.created_at|date:"d.m.Y H:i" }}</dd>
+                        
+                        <dt class="col-sm-4">{% trans "Last Modified" %}</dt>
+                        <dd class="col-sm-8">{{ laboratory.modified_at|date:"d.m.Y H:i" }}</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a href="{% url 'laboratory_update' laboratory.pk %}" class="btn btn-primary">
+                {% trans "Edit Laboratory" %}
+            </a>
+            <a href="{% url 'laboratory_delete' laboratory.pk %}" class="btn btn-danger">
+                {% trans "Delete Laboratory" %}
+            </a>
+            <a href="{% url 'laboratory_list' %}" class="btn btn-secondary">
+                {% trans "Back to List" %}
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %} 

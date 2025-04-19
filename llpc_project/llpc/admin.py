@@ -4,13 +4,13 @@ from .models import Laboratory, ParameterEvaluation, LaboratoryUpload, Parameter
 
 @admin.register(Laboratory)
 class LaboratoryAdmin(admin.ModelAdmin):
-    list_display = ('name', 'leader', 'lab_type', 'referral_type', 'user', 'created_at')
-    list_filter = ('lab_type', 'referral_type', 'created_at')
-    search_fields = ('name', 'leader', 'address')
+    list_display = ('name', 'leader', 'lab_type', 'country', 'user', 'created_at')
+    list_filter = ('lab_type', 'referral_type', 'country', 'created_at')
+    search_fields = ('name', 'leader', 'city', 'country')
     readonly_fields = ('created_at', 'updated_at')
     fieldsets = (
         (None, {
-            'fields': ('name', 'leader', 'lab_type', 'address', 'referral_type', 'user')
+            'fields': ('name', 'leader', 'lab_type', 'street', 'city', 'zip_code', 'country', 'referral_type', 'user')
         }),
         (_('Timestamps'), {
             'fields': ('created_at', 'updated_at'),

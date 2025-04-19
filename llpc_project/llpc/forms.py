@@ -2,6 +2,7 @@ from django import forms
 from django.utils.translation import gettext_lazy as _
 from .models import ParameterEvaluation, Laboratory
 from captcha.fields import CaptchaField
+from django_countries.widgets import CountrySelectWidget
 
 class LaboratoryForm(forms.ModelForm):
     """Form for laboratory information."""
@@ -9,16 +10,19 @@ class LaboratoryForm(forms.ModelForm):
     
     class Meta:
         model = Laboratory
-        fields = ['name', 'leader', 'lab_type', 'address', 'referral_type']
+        fields = ['name', 'leader', 'lab_type', 'street', 'city', 'zip_code', 'country', 'referral_type']
         labels = {
-            'name': _('Laboratory Name'),
-            'leader': _('Laboratory Leader'),
-            'lab_type': _('Laboratory Type'),
-            'address': _('Address'),
-            'referral_type': _('Referral Type'),
+            'name': _('Labor Name'),
+            'leader': _('Laborleiter'),
+            'lab_type': _('Labor Typ'),
+            'street': _('Straße'),
+            'city': _('Stadt'),
+            'zip_code': _('PLZ'),
+            'country': _('Land'),
+            'referral_type': _('Einsender'),
         }
         widgets = {
-            'address': forms.Textarea(attrs={'rows': 3}),
+            "country": CountrySelectWidget()
         }
 
 class ParameterEvaluationForm(forms.ModelForm):

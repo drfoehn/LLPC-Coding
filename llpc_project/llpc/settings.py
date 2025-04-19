@@ -7,4 +7,5 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'llpc',
     'captcha',
+    'django_countries',
 ] 

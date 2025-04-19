@@ -1,0 +1,40 @@
+{% extends "llpc/base.html" %}
+{% load django_tables2 %}
+{% load i18n %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>{% trans "Laboratories" %}</h2>
+    
+    <!-- Search Form -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <form method="get" class="row g-3">
+                <div class="col-md-8">
+                    <input type="text" name="search" class="form-control" placeholder="{% trans 'Search by name, leader, city or country...' %}" value="{{ search_query }}">
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary">{% trans "Search" %}</button>
+                    {% if search_query %}
+                        <a href="{% url 'llpc:laboratory_list' %}" class="btn btn-secondary">{% trans "Clear" %}</a>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Results Table -->
+    <div class="card">
+        <div class="card-body">
+            {% render_table table %}
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="mt-3">
+        <a href="{% url 'llpc:laboratory_form' %}" class="btn btn-primary">
+            {% trans "Add New Laboratory" %}
+        </a>
+    </div>
+</div>
+{% endblock %} 

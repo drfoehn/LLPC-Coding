@@ -2,32 +2,37 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils.translation import gettext_lazy as _
+from django_countries.fields import CountryField
 
 class Laboratory(models.Model):
     """Model representing a laboratory."""
     LABORATORY_TYPES = [
-        ('HOSPITAL', _('Hospital Laboratory')),
-        ('PRIVATE', _('Private Laboratory')),
-        ('UNIVERSITY', _('University Laboratory')),
-        ('OTHER', _('Other')),
+        ('HOSPITAL', _('Kliniklabor')),
+        ('PRIVATE', _('Privatlabor')),
+        ('UNIVERSITY', _('Universitätslabor')),
+        ('OTHER', _('Sonstiges')),
     ]
 
     REFERRAL_TYPES = [
-        ('INTERNAL', _('Internal Only')),
-        ('EXTERNAL', _('Internal and External')),
+        ('INTERNAL', _('Nur interne Aufträge')),
+        ('EXT_INT', _('Interne und externe Aufträge')),
+        ('EXTERNAL', _('Nur externe Aufträge')),
     ]
 
     name = models.CharField(max_length=200)
     leader = models.CharField(max_length=200)
     lab_type = models.CharField(max_length=20, choices=LABORATORY_TYPES)
-    address = models.TextField()
+    street = models.CharField(max_length=200, blank=True)
+    city = models.CharField(max_length=200, blank=True)
+    zip_code = models.CharField(max_length=10, blank=True)
+    country = CountryField(blank_label='(Land auswählen)')
     referral_type = models.CharField(max_length=20, choices=REFERRAL_TYPES)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
-        verbose_name_plural = "laboratories"
+        verbose_name_plural = _('Laboratorien')
 
     def __str__(self):
         return self.name
@@ -199,6 +204,7 @@ class ParameterVolume(models.Model):
     """Model for storing the volume of parameters per laboratory."""
     laboratory = models.ForeignKey(Laboratory, on_delete=models.CASCADE)
     loinc_code = models.CharField(max_length=20)
+    month = models.IntegerField()
     year = models.IntegerField()
     volume = models.IntegerField(validators=[MinValueValidator(0)])
     upload = models.ForeignKey(LaboratoryUpload, on_delete=models.CASCADE)
